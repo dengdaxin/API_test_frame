@@ -3,8 +3,10 @@
 # @time:2021/7/3 16:45
 import os
 from common.excel_utils import ExcelUtils
+from common.config_utils import config
+
 current_path = os.path.dirname(__file__)
-test_data_path = os.path.join(current_path, '../test_data/test_case_data.xlsx')
+test_data_path = os.path.join(current_path, '..',config.case_data_path)
 
 class TestDataUtils:
 
