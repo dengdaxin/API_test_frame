@@ -25,7 +25,19 @@ class ConfigUtils:
         value = self.__conf.get('path','CASE_DATA_PATH')
         return value
 
+    @property
+    def log_path(self):
+        '''获取url'''
+        value = self.__conf.get('path', 'LOG_PATH')
+        return value
+
+    @property
+    def log_level(self):
+        '''获取url'''
+        value = self.__conf.get('log', 'LOG_LEVEL')
+        return int(value)
+
 config = ConfigUtils()
 
 if __name__ == '__main__':
-    print(config.case_data_path)
+    print(config.log_level)
